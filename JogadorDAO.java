@@ -17,7 +17,12 @@ public class JogadorDAO {
         }
     }
 
-    public void inserirJogador(Jogador jogador) {
+    public void inserirJogador(Jogador jogador) throws JogadorInvalidoException {
+        
+        if (buscarJogadorPorNickname(jogador.getNickname()) != null) {
+            throw new JogadorInvalidoException("Nickname '" + jogador.getNickname() + "' já está cadastrado.");
+        }
+
         String sql = "INSERT INTO jogadores (nome, sobrenome, nickname, pontuacao) VALUES (?, ?, ?, ?)";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setString(1, jogador.getNome());
@@ -76,8 +81,6 @@ public class JogadorDAO {
         }
         return jogadores;
     }
-
-
 
     public void atualizarRanking(Jogador jogador) throws JogoException {
         String query = "UPDATE jogadores SET pontuacao = ? WHERE nickname = ?";
