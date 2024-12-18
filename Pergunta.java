@@ -2,7 +2,7 @@ package projeto;
 
 import java.util.List;
 
-public abstract class Pergunta {
+public abstract class Pergunta implements ValidadorResposta {
  private int id;
  private String texto;
  private String respostaCorreta;
@@ -12,8 +12,6 @@ public abstract class Pergunta {
      this.texto = texto;
      this.respostaCorreta = respostaCorreta;
  }
- 
- public abstract boolean validarResposta(String resposta);
 
  public int getId() {
      return id;
