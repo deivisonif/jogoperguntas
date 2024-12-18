@@ -13,15 +13,35 @@ public class Jogador {
         this.pontuacao = 0;
     }
 
-    public void incrementarPontuacao() {
-        this.pontuacao++;
+    public String getNome() {
+        return nome;
+    }
+
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
+    public String getNickname() {
+        return nickname;
     }
 
     public int getPontuacao() {
         return pontuacao;
     }
+    
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
-    public String getNomeCompleto() {
-        return nome + " " + sobrenome + " (" + nickname + ")";
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public void setPontuacao(int pontuacao) {
+        this.pontuacao = pontuacao;
     }
 }
