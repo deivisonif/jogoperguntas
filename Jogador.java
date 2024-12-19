@@ -42,6 +42,8 @@ public class Jogador {
     }
 
     public void setPontuacao(int pontuacao) {
-        this.pontuacao = pontuacao;
+        if (pontuacao >= 0) {
+            this.pontuacao = pontuacao;
+        }
     }
 }
