@@ -35,3 +35,43 @@ Contém todas as classes principais do sistema. Abaixo está uma explicação so
 * PerguntaVF.java: Subclasse de Pergunta que implementa funcionalidades específicas para perguntas de verdadeiro ou falso;
 * ValidadorResposta.java: Classe utilitária responsável por validar as respostas dos jogadores, verificando se estão corretas.
 
+  # Projeto de Jogo em Java
+
+Este é um jogo desenvolvido em Java com integração a um banco de dados MySQL. O projeto permite criar jogadores, registrar pontuações e exibir um ranking.
+
+## Pré-requisitos
+
+Antes de rodar o projeto, certifique-se de ter os seguintes softwares instalados na sua máquina:
+
+- **Java JDK 8 ou superior**
+- **MySQL** (preferencialmente MySQL Server)
+- **IDE de sua escolha**
+- **Driver JDBC para MySQL**
+
+## Como iniciar o projeto
+
+Siga as etapas abaixo para configurar e rodar o jogo:
+
+1. **Clone ou baixe este repositório**
+   Clone o projeto usando Git:
+   ```bash
+   git clone https://github.com/deivisonif/jogoperguntas.git
+
+Ou baixe o projeto como arquivo ZIP.
+
+Configure o banco de dados MySQL
+
+Certifique-se de que o MySQL está instalado e funcionando.
+Verifique se a porta padrão do MySQL é 3306. Caso não seja, atualize a URL de conexão no projeto.
+
+O projeto usa as credenciais padrão: root como usuário e uma senha vazia. Se sua configuração for diferente, edite a conexão no arquivo JogadorDAO.java:
+
+this.connection = DriverManager.getConnection(
+    "jdbc:mysql://localhost:3306/jogo", "root", "");
+
+Crie o banco de dados automaticamente:
+Rode o arquivo BancoDados.java na sua IDE. Esse arquivo criará automaticamente o banco de dados necessário para o jogo, incluindo as tabelas e estrutura inicial.
+
+Inicie o jogo
+
+Após configurar o banco de dados, rode o arquivo Main.java para iniciar o jogo.
