@@ -9,7 +9,7 @@ Interface Interativa: Navegação simples e visual amigável para o usuário;
 Categorias de Perguntas: Suporte a múltiplos tópicos para uma experiência diversificada;
 Persistência de Dados: Salva o progresso ou os dados das perguntas.
 
-Tecnologias Utilizadas
+Tecnologias Utilizadas:
 Linguagem de Programação: Java;
 Paradigma: Programação Orientada a Objetos;
 Ambiente de Desenvolvimento: Eclipse;
