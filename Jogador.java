@@ -13,37 +13,23 @@ public class Jogador {
         this.pontuacao = 0;
     }
 
+    public void aumentarPontuacao(int pontos) {
+        this.pontuacao += pontos;
+    }
+
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
     public String getSobrenome() {
-        return sobrenome;
+        return this.sobrenome;
     }
 
     public String getNickname() {
-        return nickname;
+        return this.nickname;
     }
 
     public int getPontuacao() {
-        return pontuacao;
-    }
-    
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public void setSobrenome(String sobrenome) {
-        this.sobrenome = sobrenome;
-    }
-
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
-    }
-
-    public void setPontuacao(int pontuacao) {
-        if (pontuacao >= 0) {
-            this.pontuacao = pontuacao;
-        }
+        return this.pontuacao;
     }
 }
