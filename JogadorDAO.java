@@ -20,7 +20,6 @@ public class JogadorDAO {
             stmt.setString(3, jogador.getNickname());
             stmt.setInt(4, jogador.getPontuacao());
             stmt.executeUpdate();
-            System.out.println("Nome: " + jogador.getNome() + jogador.getSobrenome() + jogador.getNickname());
         } catch (SQLException e) {
             e.printStackTrace();
         }
