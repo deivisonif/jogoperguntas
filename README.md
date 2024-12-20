@@ -15,8 +15,7 @@ Paradigma: Programação Orientada a Objetos;
 Ambiente de Desenvolvimento: Eclipse;
 Bibliotecas e Frameworks: JavaFX para a interface gráfica.
 
-Estrutura do Projeto
-O projeto está organizado no seguinte formato:
+Estrutura do Projeto:
 
 Diretório src/projeto
 Contém todas as classes principais do sistema. Abaixo está uma explicação sobre cada uma:
