@@ -96,7 +96,7 @@ public class JogadorDAO {
                 int pontuacao = result.getInt("pontuacao");
 
                 Jogador jogador = new Jogador(nome, sobrenome, nickname);
-                jogador.setPontuacao(pontuacao);
+                jogador.aumentarPontuacao(pontuacao);
                 ranking.add(jogador);
             }
         } catch (SQLException e) {
