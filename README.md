@@ -1,7 +1,7 @@
 Descrição do Projeto
 Este projeto é um jogo de perguntas e respostas desenvolvido como parte da disciplina Programação Orientada a Objetos no curso de Sistemas de Informação pelo Instituto Federal de Alagoas (IFAL). O objetivo do jogo é oferecer uma experiência interativa onde os usuários podem testar seus conhecimentos em diversos temas, com uma interface simples e intuitiva, promovendo a aplicação prática dos conceitos de POO.
 
-Funcionalidades
+Funcionalidades:
 Cadastro de Perguntas e Respostas: Permite que o administrador insira novas perguntas com múltiplas alternativas e a indicação da resposta correta;
 Sistema de Pontuação: Acumula pontos para o jogador a cada resposta correta;
 Feedback Imediato: Indica se a resposta foi correta ou incorreta após a escolha do jogador;
@@ -13,7 +13,6 @@ Tecnologias Utilizadas
 Linguagem de Programação: Java;
 Paradigma: Programação Orientada a Objetos;
 Ambiente de Desenvolvimento: Eclipse;
-Bibliotecas e Frameworks: JavaFX para a interface gráfica.
 
 Estrutura do Projeto:
 
