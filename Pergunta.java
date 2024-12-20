@@ -24,3 +24,4 @@ public abstract class Pergunta implements ValidadorResposta {
  public String getRespostaCorreta() {
      return respostaCorreta;
  }
+}
