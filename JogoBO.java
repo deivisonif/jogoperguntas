@@ -12,7 +12,7 @@ public class JogoBO {
         this.jogadorDAO = jogadorDAO;
     }
 
-    public List<Pergunta> buscarPerguntasAleatorias() throws JogoException {
+    public List<Pergunta> buscarPerguntasAleatorias() throws JogoException, PerguntaNaoEncontradaException {
         return perguntaDAO.buscarPerguntasAleatorias();
     }
 
