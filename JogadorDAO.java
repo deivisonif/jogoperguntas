@@ -8,21 +8,11 @@ public class JogadorDAO {
 
     private Connection connection;
 
-    public JogadorDAO() {
-        try {
-            this.connection = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/jogo", "root", "");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+    public JogadorDAO(Connection connection) {
+        this.connection = connection;
     }
 
-    public void inserirJogador(Jogador jogador) throws JogadorInvalidoException {
-        
-        if (buscarJogadorPorNickname(jogador.getNickname()) != null) {
-            throw new JogadorInvalidoException("Nickname '" + jogador.getNickname() + "' já está cadastrado.");
-        }
-
+    public void inserirJogador(Jogador jogador) {
         String sql = "INSERT INTO jogadores (nome, sobrenome, nickname, pontuacao) VALUES (?, ?, ?, ?)";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setString(1, jogador.getNome());
@@ -30,6 +20,7 @@ public class JogadorDAO {
             stmt.setString(3, jogador.getNickname());
             stmt.setInt(4, jogador.getPontuacao());
             stmt.executeUpdate();
+            System.out.println("Nome: " + jogador.getNome() + jogador.getSobrenome() + jogador.getNickname());
         } catch (SQLException e) {
             e.printStackTrace();
         }
