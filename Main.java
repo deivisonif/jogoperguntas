@@ -10,12 +10,6 @@ public class Main {
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/jogo", "root", "");
             GetNomes getNomes = new GetNomes();
             Jogador jogador = getNomes.initNames();
-            if (jogador == null) {
-                System.out.println("Erro: Jogador não foi criado corretamente.");
-                return;
-            } else {
-            	System.out.println("Adicionado");
-            }
             JogadorDAO jogadorDAO = new JogadorDAO(connection);
             jogadorDAO.inserirJogador(jogador);
             PerguntaDAO perguntaDAO = new PerguntaDAO(connection);
