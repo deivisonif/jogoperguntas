@@ -16,7 +16,7 @@ public class JogoService {
     }
 
 
-    public void iniciarJogo(Jogador jogador) {
+    public void iniciarJogo(Jogador jogador) throws PerguntaNaoEncontradaException {
         Scanner scanner = new Scanner(System.in);
         jogador.aumentarPontuacao(jogador.getPontuacao());
         jogadorDAO.atualizarPontuacao(jogador);
